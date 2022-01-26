@@ -1,0 +1,109 @@
+@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+body{
+    background-color: hsl(210, 46%, 95%);
+    font-family:sans-serif
+}
+.container-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 30px;
+}
+.container{
+    width: 78%;
+    display: grid;
+    padding: 30px;
+    gap: 20px;
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "one one two three"
+    "four five five three"
+    ;
+}
+
+.cont1{
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url('/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.cont2{
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cont3{
+    grid-area: three;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+.cont4{
+    grid-area: four;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+.cont5{
+    grid-area: five;
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bio{
+    display: flex;
+    gap: 10px;
+    
+}
+.bio img{
+    border-radius: 50px;
+}
+h3{
+    opacity: 85%;
+    font-weight: 600;
+}
+p{
+    font-size: 12px;
+    opacity: 70%;
+    font-weight: 500;
+}
+.name{
+    font-size: 13px;
+}
+.verified{
+    font-size: 11px;
+    opacity: 50%;
+}
+
+@media screen and (max-width:500px) {
+    .container{
+        width: 78%;
+        display: grid;
+        padding: 30px;
+        gap: 20px;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+
+        ;
+    }
+
+}
